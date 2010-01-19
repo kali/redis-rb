@@ -6,12 +6,12 @@ require 'spec/rake/spectask'
 require 'tasks/redis.tasks'
 
 
-GEM = 'redis'
-GEM_NAME = 'redis'
+GEM = 'kali-redis'
+GEM_NAME = 'kali'
 GEM_VERSION = '0.1.1'
-AUTHORS = ['Ezra Zygmuntowicz', 'Taylor Weibley', 'Matthew Clark', 'Brian McKinney', 'Salvatore Sanfilippo', 'Luca Guidi']
+AUTHORS = ['Ezra Zygmuntowicz', 'Taylor Weibley', 'Matthew Clark', 'Brian McKinney', 'Salvatore Sanfilippo', 'Luca Guidi', 'Mathieu Poumeyrol']
 EMAIL = "ez@engineyard.com"
-HOMEPAGE = "http://github.com/ezmobius/redis-rb"
+HOMEPAGE = "http://github.com/kali/redis-rb"
 SUMMARY = "Ruby client library for redis key value storage server"
 
 spec = Gem::Specification.new do |s|

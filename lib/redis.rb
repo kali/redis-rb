@@ -43,7 +43,8 @@ class Redis
   
   MULTI_BULK_COMMANDS = {
     "mset"      => true,
-    "msetnx"    => true
+    "msetnx"    => true,
+    "zhadd"     => true,
   }
 
   BOOLEAN_PROCESSOR = lambda{|r| r == 1 }
@@ -217,8 +218,6 @@ class Redis
     if MULTI_BULK_COMMANDS[argvv.flatten[0].to_s]
       # TODO improve this code
       argvp   = argvv.flatten
-      values  = argvp.pop.to_a.flatten
-      argvp   = values.unshift(argvp[0])
       command = ["*#{argvp.size}"]
       argvp.each do |v|
         v = v.to_s
